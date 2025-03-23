@@ -34,13 +34,28 @@ def sum_price():
 
     print(sum)
 
+def average_price():
+    avarage = 0
+    av_sum=0
+    av_count=0
+    for product in products:
+        try:
+            av_sum += product['price']
+            av_count += 1
+        except TypeError:
+            print(f"U pruduktu {product['name']} není price číslo")
+    avarage = av_sum/av_count
+    print(avarage)
+
 
 def menu():
     print("Vítej ve skladu")
     print("###############\n")
     print("1. Výpis položek")
     print("2. Přidání položky")
-    print("3. Celková suma\n")
+    print("3. Celková cena")
+    print("4. Pruměrná cena\n")
+
 
     choice = int(input("Volba: "))
 
@@ -57,8 +72,13 @@ def menu():
         menu()
 
     elif choice == 3:
-        print("Celková suma:")
+        print("Celková cena:")
         sum_price()
+        print("")
+        menu()
+    elif choice == 4:
+        print("Průměr ceny:")
+        average_price()
         print("")
         menu()
 
