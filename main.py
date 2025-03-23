@@ -57,6 +57,26 @@ def edit_product():
 
         print(f"Název produktu: {search['name']}, cena: {search['price']}$")
 
+def delete_product():
+    search = int(input("Napiš číslo produktu který chcete vymazat: "))
+    try:
+        search = list(products)[search - 1]
+        question = input(f"Chcete odstranit prudukt: {search['name']}:{search['price']}. Y/N")
+        if question.lower() == "y":
+            products.remove(search)
+            print("Produkt byl vymazán")
+
+        elif question.lower() == "n":
+            print("Okey")
+
+        else:
+            print("Špatný input")
+            delete_product()
+
+    except IndexError:
+        print("Takový produkt neexistuje")
+
+
 def add_product():
     product_name = input("Název produktu:")
     product_price = input("Název cenu:")
@@ -146,7 +166,8 @@ def menu():
     print("5. Nejlevnějí produkt")
     print("6. Nejdražší produkt")
     print("7. Search")
-    print("8. Edit produktu\n")
+    print("8. Edit produktu")
+    print("9. Odstranění produktu\n")
 
 
     choice = int(input("Volba: "))
@@ -191,6 +212,11 @@ def menu():
     elif choice == 8:
         print("Editování:")
         edit_product()
+        print("")
+        menu()
+    elif choice == 9:
+        print("Removing:")
+        delete_product()
         print("")
         menu()
     else:
