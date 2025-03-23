@@ -9,7 +9,21 @@ products = [
     }
 ]
 
+def search_function():
+    answer =[]
+    search = input("Enter search term: ").lower()
+    search = search.replace(" ", "")
+    try:
+        for product in products:
+            if search==(product["name"].lower())[:len(search)]:
+                answer.append(product)
 
+    except IndexError:
+        pass
+
+    for product in answer:
+        print(f"{product['name']}: {product['price']}")
+print("")
 def print_products():
     for product in products:
         print(f"Název produktu2: {product['name']}, cena: {product['price']}$")
@@ -102,7 +116,8 @@ def menu():
     print("3. Celková cena")
     print("4. Pruměrná cena")
     print("5. Nejlevnějí produkt")
-    print("6. Nejdražší produkt\n")
+    print("6. Nejdražší produkt")
+    print("7. Search\n")
 
 
     choice = int(input("Volba: "))
@@ -137,6 +152,11 @@ def menu():
     elif choice == 6:
         print("Nejdražší produkt:")
         biggest_price()
+        print("")
+        menu()
+    elif choice == 7:
+        print("Vyhledávání:")
+        search_function()
         print("")
         menu()
     else:
