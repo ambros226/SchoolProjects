@@ -22,8 +22,32 @@ def add_product():
         'name': product_name,
         'price': product_price
     }
-
     products.append(product2)
+
+
+def smallest_price():
+    try:
+        min_products = []
+        min_price=list(products)[0]['price']
+        for product in products:
+
+            if product['price'] < min_price:
+                min_products = []
+                min_products.append({'name': product['name'], 'price': product['price']})
+                min_price=product['price']
+
+            elif product['price'] == min_price:
+                min_products.append({'name': product['name'], 'price': product['price']})
+
+    except IndexError:
+        print("Nebyl nalezen žádný produkt")
+    except TypeError:
+        print(f"U pruduktu {product['name']} není price číslo")
+
+    for product in min_products:
+        print(f"{product['name']}: {product['price']}")
+
+
 def sum_price():
     sum = 0
     for product in products:
@@ -54,7 +78,8 @@ def menu():
     print("1. Výpis položek")
     print("2. Přidání položky")
     print("3. Celková cena")
-    print("4. Pruměrná cena\n")
+    print("4. Pruměrná cena")
+    print("5. Nejlevnějí produkt\n")
 
 
     choice = int(input("Volba: "))
@@ -79,6 +104,11 @@ def menu():
     elif choice == 4:
         print("Průměr ceny:")
         average_price()
+        print("")
+        menu()
+    elif choice == 5:
+        print("Nejlevnějí produkt:")
+        smallest_price()
         print("")
         menu()
 
