@@ -47,6 +47,28 @@ def smallest_price():
     for product in min_products:
         print(f"{product['name']}: {product['price']}")
 
+def biggest_price():
+    try:
+        max_products = []
+        max_price=list(products)[0]['price']
+        for product in products:
+
+            if product['price'] > max_price:
+                max_products = []
+                max_products.append({'name': product['name'], 'price': product['price']})
+                max_price=product['price']
+
+            elif product['price'] == max_price:
+                max_products.append({'name': product['name'], 'price': product['price']})
+
+    except IndexError:
+        print("Nebyl nalezen žádný produkt")
+    except TypeError:
+        print(f"U pruduktu {product['name']} není price číslo")
+
+    for product in max_products:
+        print(f"{product['name']}: {product['price']}")
+
 
 def sum_price():
     sum = 0
@@ -79,7 +101,8 @@ def menu():
     print("2. Přidání položky")
     print("3. Celková cena")
     print("4. Pruměrná cena")
-    print("5. Nejlevnějí produkt\n")
+    print("5. Nejlevnějí produkt")
+    print("6. Nejdražší produkt\n")
 
 
     choice = int(input("Volba: "))
@@ -91,7 +114,7 @@ def menu():
         menu()
 
     elif choice == 2:
-        print("Přidání poožky:")
+        print("Přidání položky:")
         add_product()
         print("")
         menu()
@@ -111,7 +134,11 @@ def menu():
         smallest_price()
         print("")
         menu()
-
+    elif choice == 6:
+        print("Nejdražší produkt:")
+        biggest_price()
+        print("")
+        menu()
     else:
         print("Zadal jsi špatně!\n")
         menu()
