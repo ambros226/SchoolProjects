@@ -24,13 +24,23 @@ def add_product():
     }
 
     products.append(product2)
+def sum_price():
+    sum = 0
+    for product in products:
+        try:
+            sum += product['price']
+        except TypeError:
+            print(f"U pruduktu {product['name']} není price číslo")
+
+    print(sum)
 
 
 def menu():
     print("Vítej ve skladu")
     print("###############\n")
-    print("1. Výpis polože")
-    print("2. Přidání položky\n")
+    print("1. Výpis položek")
+    print("2. Přidání položky")
+    print("3. Celková suma\n")
 
     choice = int(input("Volba: "))
 
@@ -43,6 +53,12 @@ def menu():
     elif choice == 2:
         print("Přidání poožky:")
         add_product()
+        print("")
+        menu()
+
+    elif choice == 3:
+        print("Celková suma:")
+        sum_price()
         print("")
         menu()
 
