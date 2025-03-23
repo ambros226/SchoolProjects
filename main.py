@@ -11,7 +11,7 @@ products = [
 
 def search_function():
     answer =[]
-    search = input("Enter search term: ").lower()
+    search = input("Vlož jméno hledaného produktu: ").lower()
     search = search.replace(" ", "")
     try:
         for product in products:
@@ -29,12 +29,40 @@ def print_products():
         print(f"Název produktu2: {product['name']}, cena: {product['price']}$")
 
 
+
+def edit_product():
+    search = int(input("Napiš číslo produktu: "))
+    try:
+        search = list(products)[search-1]
+        question=input(f"Chcete upravit prudukt: {search['name']}:{search['price']}. Y/N")
+        if question.lower()=="y":
+            product_name = input("Název produktu:")
+            product_price = input("Název cenu:")
+            product2 = {
+                'name': product_name,
+                'price': product_price
+            }
+            search["name"] = product_name
+            search["price"] = int(product_price)
+
+
+        elif question.lower()=="n":
+            print("Okey")
+        else:
+            print("Špatný input")
+            edit_product()
+
+    except IndexError:
+        print("Takový produkt neexistuje")
+
+        print(f"Název produktu: {search['name']}, cena: {search['price']}$")
+
 def add_product():
     product_name = input("Název produktu:")
     product_price = input("Název cenu:")
     product2 = {
         'name': product_name,
-        'price': product_price
+        'price': int(product_price)
     }
     products.append(product2)
 
@@ -117,7 +145,8 @@ def menu():
     print("4. Pruměrná cena")
     print("5. Nejlevnějí produkt")
     print("6. Nejdražší produkt")
-    print("7. Search\n")
+    print("7. Search")
+    print("8. Edit produktu\n")
 
 
     choice = int(input("Volba: "))
@@ -157,6 +186,11 @@ def menu():
     elif choice == 7:
         print("Vyhledávání:")
         search_function()
+        print("")
+        menu()
+    elif choice == 8:
+        print("Editování:")
+        edit_product()
         print("")
         menu()
     else:
