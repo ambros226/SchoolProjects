@@ -340,7 +340,7 @@ main{
         height: 600px;
     }
     #third-section{
-        margin: 50px 0;
+        margin: 50px 0 80px 0;
         display: flex;
         flex-direction: column;
         #td-header-container{
@@ -378,7 +378,29 @@ main{
             }
         }
     }
+    #fourth-section{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        background: #f7f8f2;
+        #fh-header-container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            h1{
+                font-size: 60px;
+            }
+            p{
+                font-size: 20px;
+                text-align: center;
+                width: 705px;
+            }
 
+        }
+    }
 }
 
 
