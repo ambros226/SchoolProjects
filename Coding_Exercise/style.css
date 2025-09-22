@@ -155,6 +155,7 @@ header {
             line-height: 1.8
 
         }
+
         a{
             position: absolute;
             top: 60%;
@@ -337,6 +338,45 @@ main{
     img{
         width: auto;
         height: 600px;
+    }
+    #third-section{
+        margin: 50px 0;
+        display: flex;
+        flex-direction: column;
+        #td-header-container{
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-bottom: 80px;
+            h1{
+                padding-right: 120px;
+                margin-bottom: 20px;
+            }
+            p{
+                font-size: 20px;
+
+            }
+            a{
+                padding-top: 30px;
+                color: #da6a4c;
+                font-family: "Arial", sans-serif;
+                font-size: 23px;
+                font-weight: bold;
+                text-decoration: none;
+                border-bottom: 1px solid #da6a4c;
+            }
+        }
+        #td-project-container{
+            display: flex;
+            justify-content: right;
+            gap: 2rem;
+            img{
+                height: 450px;
+            }
+            .full-card{
+                width:600px;
+            }
+        }
     }
 
 }
