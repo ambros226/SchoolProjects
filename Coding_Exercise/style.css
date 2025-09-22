@@ -226,7 +226,7 @@ main{
                 display: flex;
                 align-items: center;
                 border: #efeeee solid 2px;
-                border-radius: 10px;
+                border-radius: 25px;
                 padding: 25px;
                 width: 500px;
                 img{
