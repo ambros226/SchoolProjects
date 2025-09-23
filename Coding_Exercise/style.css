@@ -347,7 +347,7 @@ main{
             display: flex;
             align-items: center;
             justify-content: space-around;
-            margin-bottom: 80px;
+            margin-bottom: 120px;
             h1{
                 padding-right: 120px;
                 margin-bottom: 20px;
@@ -385,11 +385,13 @@ main{
         flex-direction: column;
         padding: 20px;
         background: #f7f8f2;
+        margin-top: 120px;
         #fh-header-container{
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
+            margin-bottom: 30px;
             h1{
                 font-size: 60px;
             }
