@@ -372,9 +372,12 @@ main{
             gap: 2rem;
             img{
                 height: 450px;
+                border-radius: 25px 0 0 25px;
+
             }
             .full-card{
                 width:600px;
+                border-radius: 25px ;
             }
         }
     }
@@ -402,7 +405,80 @@ main{
             }
 
         }
+        #fs-cards-container{
+            display: flex;
+            gap: 1rem;
+            margin-top: 150px;
+
+            .fs-card{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                padding: 80px 40px 30px;
+                background: #ffffff;
+                border-radius: 35px;
+                width: 675px;
+            }
+            .fs-img{
+                display: flex;
+                justify-content: center;
+                height: 10px;
+                img{
+                    overflow: hidden;
+                    position: relative;
+                    bottom: 130px;
+                    box-shadow:#050607 0 2px 15px -4px;;
+                }
+
+            }
+            .fs-text{
+                p{
+                    font-size: 20px;
+                    text-align: center;
+                    line-height: 2;
+                    margin: 0 26px 10px 26px;
+                }
+            }
+
+            img{
+                height: 110px;
+                border-radius: 50%;
+                border: #ffffff solid 3px;
+            }
+            .fs-heading{
+                margin-top: 20px;
+                border-top: #c1bfbf solid 1px;
+                display: flex;
+                justify-content: center;
+                div{
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    h3{
+                        font-size: 27px;
+                    }
+                    p{
+                        padding-top: 8px;
+                        text-align: center;
+                        color: #8c8c8c;
+                    }
+                }
+            }
+        }
     }
+}
+
+.main{
+    position: relative;
+    top: -80px;
+}
+.left{
+    position: relative;
+    right: 30px ;
+}
+.right{
+    position: relative;
+    right: -30px ;
 }
 
 
