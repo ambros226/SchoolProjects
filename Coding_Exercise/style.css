@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -168,23 +169,23 @@ header {
             border-bottom: 1px solid #da6a4c;
         }
 
-            #hd-years{
-                position: absolute;
-                top: 80%;
-                left: 10%;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                color: #172e3e;
-                h2{
-                    font-size: 70px;
-                    font-family: "Arial", sans-serif;
-                }
-                p{
-                    font-size: 20px;
-                    width: 50px;
-                }
+        #hd-years{
+            position: absolute;
+            top: 80%;
+            left: 10%;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: #172e3e;
+            h2{
+                font-size: 70px;
+                font-family: "Arial", sans-serif;
             }
+            p{
+                font-size: 20px;
+                width: 50px;
+            }
+        }
         #hd-certification{
             position: absolute;
             top: 70%;
@@ -389,6 +390,8 @@ main{
         padding: 20px;
         background: #f7f8f2;
         margin-top: 120px;
+        margin-bottom: 120px;
+        padding-bottom: 60px;
         #fh-header-container{
             display: flex;
             align-items: center;
@@ -465,7 +468,35 @@ main{
                 }
             }
         }
+        #fs-button-container{
+            display: flex;
+            gap: 3rem;
+            position: relative;
+            top: -30px;
+            button{
+                padding: 15px 15px 11px 15px;
+                border-radius: 50%;
+                background: #ffffff;
+                box-shadow:#050607 0 2px 15px -8px;;
+                border: none;
+            }
+            button:hover{
+                background: #3d6b67;
+                transition: 1s;
+                    .icon path{
+                        transition: 1s;
+                        fill: #ffffff;
+                    }
+
+            }
+        }
     }
+}
+.icon { width:40px; height:40px; fill: red;  }
+
+
+.icon path {
+    fill: #959595;
 }
 
 .main{
@@ -480,6 +511,3 @@ main{
     position: relative;
     right: -30px ;
 }
-
-
-
