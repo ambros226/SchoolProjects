@@ -454,6 +454,7 @@ main {
             display: flex;
             gap: 1rem;
             margin-top: 150px;
+            perspective: 1000px;
 
             .fs-card {
                 display: flex;
@@ -732,5 +733,118 @@ slider
 
 /*
 slider
+ */
+
+/*
+animation
+ */
+.anim-mainRight {
+    animation: mainRight 2s ease-in-out 1;
+    z-index: 10;
+}
+.anim-mainLeft {
+    animation: mainLeft 2s ease-in-out 1;
+    z-index: 10;
+}
+.anim-leftRight {
+    animation: leftRight 2s ease-in-out 1;
+    z-index: 10;
+}
+.anim-leftLeft {
+    animation: leftLeft 2s ease-in-out 1;
+    z-index: 10;
+}
+.anim-rightRight {
+    animation: rightRight 2s ease-in-out 1;
+    z-index: 10;
+}
+.anim-rightLeft {
+    animation: rightLeft 2s ease-in-out 1;
+    z-index: -20;
+}
+
+
+@keyframes mainRight {
+    from {
+        transform: translateX(-720px) translateY(80px);
+
+
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes mainLeft {
+    from {
+        transform: translateX(720px) translateY(80px);
+
+
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes leftRight {
+    from {
+        transform: translateX(-720px) translateY(-80px);
+
+
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes rightRight {
+    from {
+        transform: translateX(1500px) translateY(0);
+
+    }
+    5%{
+        transform: translateX(1550px);
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        transform: translateX(-500px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes leftLeft {
+    from {
+        transform: translateX(720px) translateY(-80px);
+
+
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes rightLeft {
+    from {
+        transform: translateX(-1500px) translateY(0) translateZ(-500px);
+    }
+    5%{
+        transform: translateX(-1550px);
+    }
+    40%{
+        opacity: 0;
+    }
+    60%{
+        transform: translateX(500px);
+        opacity: 0.8;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+/*
+animation
  */
 
