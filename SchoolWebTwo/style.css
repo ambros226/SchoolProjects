@@ -138,6 +138,7 @@ hero section
     top: 710px;
     left: 890px;
     gap: 10px;
+
     i:nth-child(3) {
         margin-top: -5px;
     }
@@ -150,9 +151,10 @@ hero section
     position: relative;
     right: 110px;
     bottom: -10px;
-    svg{
-        width: 100px !important;
-        height: 100px !important;
+
+    .alone-icon-svg {
+        width: 100px;
+        height: 100px;
     }
 }
 
@@ -189,11 +191,14 @@ hero section
             font-size: 45px;
             position: relative;
             bottom: 40px;
+            display: inline-block;
         }
-        div{
+
+        div {
             width: 400px;
         }
-        p{
+
+        p {
             text-align: right;
             font-size: 18px;
             font-weight: 590;
@@ -240,24 +245,28 @@ hero section
         padding: 17px 24px;
     }
 }
+
 .hero-man-picture {
     width: 800px;
     height: 800px;
-    background: linear-gradient(to right, #f4b553, #ea9b2b);
+    background: linear-gradient(to right, #f4b553, #ed9b22);
 
     clip-path: path('M 57.14 0 L 605.71 0 A 68.57 68.57 0 0 1 674.29 68.57 L 674.29 68.57 A 57.14 57.14 0 0 0 731.43 125.71 A 68.57 68.57 0 0 1 800 194.29 L 800 708.57 A 91.43 91.43 0 0 1 708.57 800 L 217.14 800 A 91.43 91.43 0 0 1 125.71 708.57 L 125.71 560 A 57.14 57.14 0 0 0 68.57 502.86 A 68.57 68.57 0 0 1 0 422.86 L 0 91.43 A 91.43 91.43 0 0 1 91.43 0 Z');
-    img[src="imagesTwo/Sign-hero.png"]{
+
+    img[src="imagesTwo/Sign-hero.png"] {
         position: relative;
         left: 50px;
         top: 50px;
 
     }
-    img[src="imagesTwo/man_hero_img.png"]{
+
+    img[src="imagesTwo/man_hero_img.png"] {
         position: relative;
         left: 250px;
 
     }
 }
+
 /*
 hero section
  */
@@ -265,43 +274,51 @@ hero section
  Photo-design-section
  */
 
-#design-section{
+#design-section {
     background-color: #020202;
-    #design-align{
+
+    #design-align {
         display: flex;
         padding-left: 50px;
     }
+
     h3 {
         color: #faf7f4;
         font-size: 170px;
         margin-top: -115px;
-        span{
+
+        span {
             content: ".";
             font-size: 220px;
-            font-family:"";
+            font-family: "";
             padding: 0 30px 0 20px;
 
         }
     }
+
     #design-images-container {
         display: flex;
-        padding-top:40px ;
+        padding-top: 40px;
         justify-content: space-between;
 
     }
-    img[src='imagesTwo/design-main.png']{
+
+    img[src='imagesTwo/design-main.png'] {
         width: 1000px;
-        padding-top:40px ;
+        padding-top: 40px;
     }
-    .side-signs{
+
+    .side-signs {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         padding: 0 40px;
-        img[src='imagesTwo/design-circle.png']{
+
+        img[src='imagesTwo/design-circle.png'] {
             width: 125px;
         }
-        img[src='imagesTwo/design-cross.png']{
+
+        img[src='imagesTwo/design-cross.png'] {
             width: 125px;
         }
     }
@@ -309,7 +326,87 @@ hero section
 
 }
 
-
 /*
  Photo-design-section
+ */
+
+/*
+Animations and effects
+ */
+
+#icons {
+    i:hover {
+        transform: scale(1.1);
+        transition: 1s;
+    }
+}
+#alone-icon svg:hover{
+    animation: round 1s;
+}
+@keyframes round{
+    from {transform:rotate(0deg);}
+    to {transform:rotate(360deg);}
+}
+.hover-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.hover-underline::after,
+.hover-underline::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(to right, #333333, #ffa802);
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.4s ease-out;
+}
+
+.hover-underline::before {
+    top: -5px;
+    transform-origin: left;
+}
+
+.hover-underline:hover::after,
+.hover-underline:hover::before {
+    transform: scaleX(1);
+}
+#achievements h2:hover::before {
+    animation: levitation 2s ease-in-out infinite;
+ }
+@keyframes levitation {
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: scale(1.2) translateY(-20px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+#hero-circles:hover span {
+    background: linear-gradient(to right, #f4bc45, #ff8d15, #fbc143, #ff8d15);
+    background-size: 200% 200%;
+    animation: gradient 3s ease infinite;
+}
+
+@keyframes gradient {
+    0%   {
+        background-position: 0 50%;
+
+    }
+    50%  {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0 50%;
+    }
+}
+/*
+Animations and effects
  */
