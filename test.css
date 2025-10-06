@@ -1,0 +1,20 @@
+.hero-man-picture {
+    width: 800px;
+    height: 800px;
+    /*background: #f3b345;
+     */
+    background: linear-gradient(to right, #efb24e, #ea9b2b);
+
+    clip-path: path('M 57.14 0 L 605.71 0 A 68.57 68.57 0 0 1 674.29 68.57 L 674.29 68.57 A 57.14 57.14 0 0 0 731.43 125.71 A 68.57 68.57 0 0 1 800 194.29 L 800 708.57 A 91.43 91.43 0 0 1 708.57 800 L 217.14 800 A 91.43 91.43 0 0 1 125.71 708.57 L 125.71 560 A 57.14 57.14 0 0 0 68.57 502.86 A 68.57 68.57 0 0 1 0 422.86 L 0 91.43 A 91.43 91.43 0 0 1 91.43 0 Z');
+    img[src="SchoolWebTwo/imagesTwo/Sign-hero.png"]{
+        position: relative;
+        left: 50px;
+        top: 50px;
+
+    }
+    img[src="SchoolWebTwo/imagesTwo/man_hero_img.png"]{
+        position: relative;
+        left: 250px;
+
+    }
+}
