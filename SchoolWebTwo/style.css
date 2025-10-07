@@ -184,6 +184,7 @@ hero section
         h2 {
             font-size: 95px;
             text-align: right;
+            font-style: italic;
         }
 
         h2:before {
