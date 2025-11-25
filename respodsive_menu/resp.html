@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <title>Shop</title>
+</head>
+
+<body>
+
+<nav class="border-b border-black/50 text-black py-2">
+    <div class="mx-4 px-4 flex items-center justify-between h-16">
+
+        <div class="flex-shrink-0">
+            <h2 class="text-3xl font-bold font-mono">Clothing</h2>
+            <h2 class="text-3xl font-bold -mt-2 font-mono">Masters</h2>
+        </div>
+
+
+        <div class="ml-auto lg:ml-0 order-2 lg:order-3">
+            <i class="fas fa-shopping-cart text-2xl"></i>
+        </div>
+
+        <input type="checkbox" id="nav-toggle" class="hidden peer">
+        <label for="nav-toggle" class="lg:hidden text-3xl order-3 ml-4">
+
+            <i class="fa-solid fa-bars"></i>
+        </label>
+
+
+
+        <ul class="fixed lg:static inset-y-0 right-0 lg:inset-auto bg-gray-100 lg:bg-transparent flex flex-col lg:flex-row gap-8 lg:gap-8 p-10 lg:p-0
+     transform translate-x-full lg:translate-x-0 transition-all duration-300
+     peer-checked:translate-x-0 z-50 overflow-auto max-h-screen">
+            <li class="lg:hidden mb-4">
+                <button class="px-4 py-2 bg-gray-300 rounded"
+                        onclick="document.getElementById('nav-toggle').checked=false;">
+                    <i class="fa-solid fa-arrow-right-from-bracket text-2xl"></i>
+                </button>
+            </li>
+
+            <li class="relative group">
+
+                <span class="hidden lg:block hover:underline font-mono text-xl">Men</span>
+
+                <label for="sub1" class="lg:hidden rounded hover:underline font-mono text-xl">Men</label>
+                <input id="sub1" type="checkbox" class="hidden peer/sub1">
+
+                <div class="lg:absolute left-0 top-full w-screen lg:w-[400px] lg:shadow-xl border-t border-black/10
+            hidden lg:group-hover:block
+            lg:p-8 p-4
+            peer/sub1:block
+            bg-white z-50">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Underwear</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Boxers</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Briefs</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Socks</a>
+                        </div>
+
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Pants</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Jeans</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Chinos</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Joggers</a>
+                        </div>
+
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Shirts</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">T-Shirts</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Polos</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Long Sleeve</a>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+
+            <li class="relative group">
+
+                <span class="hidden lg:block hover:underline font-mono text-xl">Women</span>
+
+                <label for="sub2" class="lg:hidden rounded hover:underline font-mono text-xl">Women</label>
+                <input id="sub2" type="checkbox" class="hidden peer/sub1">
+
+                <div class="lg:absolute left-0 top-full w-screen lg:w-[400px] lg:shadow-xl border-t border-black/10
+            hidden lg:group-hover:block
+            lg:p-8 p-4
+            peer/sub1:block
+            bg-white z-50">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Underwear</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Bras</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Panties</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Socks</a>
+                        </div>
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Pants</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Leggings</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Jeans</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Wide Pants</a>
+                        </div>
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Tops</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Blouses</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">T-Shirts</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Sweaters</a>
+                        </div>
+                    </div>
+                </div>
+            </li>
+            <li class="relative group">
+
+                <span class="hidden lg:block hover:underline font-mono text-xl">Children</span>
+
+                <label for="sub3" class="lg:hidden rounded hover:underline font-mono text-xl">Children</label>
+                <input id="sub3" type="checkbox" class="hidden peer/sub1">
+
+                <div class="lg:absolute left-0 top-full w-screen lg:w-[400px] lg:shadow-xl border-t border-black/10
+            hidden lg:group-hover:block
+            lg:p-8 p-4
+            peer/sub1:block
+            bg-white z-50">
+
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Underwear</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Kids Boxers</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Kids Briefs</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Socks</a>
+                        </div>
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Pants</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Jeans</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Joggers</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Shorts</a>
+                        </div>
+                        <div>
+                            <h4 class="text-black-400 font-semibold mb-2">Shirts</h4>
+                            <a class="block text-sm mb-1 hover:underline" href="#">T-Shirts</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Hoodies</a>
+                            <a class="block text-sm mb-1 hover:underline" href="#">Long Sleeve</a>
+                        </div>
+                    </div>
+
+                </div>
+            </li>
+            <li class="relative group">
+
+                <span class="hidden lg:block hover:underline font-mono text-xl">Shoes</span>
+
+                <label for="sub4" class="lg:hidden rounded hover:underline font-mono text-xl">Shoes</label>
+                <input id="sub4" type="checkbox" class="hidden peer/sub1">
+
+                <div class="lg:absolute left-0 top-full w-screen lg:w-[200px] lg:shadow-xl border-t border-black/10
+            hidden lg:group-hover:block
+            lg:p-8 p-4
+            peer/sub1:block
+            bg-white z-50">
+
+                    <div>
+                        <h4 class="text-black-400 font-semibold mb-2">Shoes</h4>
+                        <a class="block text-sm mb-1 hover:underline" href="#">Sneakers</a>
+                        <a class="block text-sm mb-1 hover:underline" href="#">Boots</a>
+                        <a class="block text-sm mb-1 hover:underline" href="#">Sandals</a>
+                    </div>
+
+                </div>
+            </li>
+            <li class="relative group">
+
+                <span class="hidden lg:block hover:underline font-mono text-xl text-red-500">Sales</span>
+
+                <label for="sub5" class="lg:hidden rounded hover:underline font-mono text-xl">Sales</label>
+                <input id="sub5" type="checkbox" class="hidden peer/sub1">
+
+                <div class="lg:absolute left-0 top-full w-screen lg:w-[200px] lg:shadow-xl border-t border-black/10
+            hidden lg:group-hover:block
+            lg:p-8 p-4
+            peer/sub1:block
+            bg-white z-50">
+
+                    <div>
+                        <h4 class="text-black-400 font-semibold mb-2">Sales</h4>
+                        <a class="block text-sm mb-1 hover:underline" href="#">Up to 30% Off</a>
+                        <a class="block text-sm mb-1 hover:underline" href="#">Up to 50% Off</a>
+                        <a class="block text-sm mb-1 hover:underline" href="#">Clearance</a>
+                    </div>
+
+                </div>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+</body>
+</html>
